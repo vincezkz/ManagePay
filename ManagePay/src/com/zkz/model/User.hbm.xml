@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC   
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"   
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zkz.model">
+	<class name="User" table="user">
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="username" column="username" type="string"></property>
+		<property name="islogin" column="islogin" type="int"></property>
+		<property name="createtime" column="createtime" type="date"></property>
+		<property name="recentlogintime" column="recentlogintime" type="date"></property> 
+		<property name="password" column="password" type="string"></property> 
+	</class>
+</hibernate-mapping>  

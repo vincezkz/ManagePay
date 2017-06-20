@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC   
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"   
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zkz.model">
+	<class name="Payment" table="payment">
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="paywhat" not-null="true">
+			<type name="org.hibernate.type.EnumType">
+    			<param name="enumClass">com.zkz.model.PayWhatEnum</param>
+    		</type>
+		</property>
+		<property name="paytime" column="paytime" type="date"></property>
+		<property name="place" column="place" type="string"></property>
+		<property name="money" column="money" type="big_decimal"></property> 
+		<property name="paytype" not-null="true">
+			<type name="org.hibernate.type.EnumType">
+	    		<param name="enumClass">com.zkz.model.PayTypeEnum</param>
+	    	</type>
+		</property> 
+		<property name="remark" column="remark" type="string"></property> 
+	</class>
+</hibernate-mapping>  
