@@ -87,6 +87,20 @@ public class IndexAction extends ActionSupport {
 			return ERROR;
 		}
 	}
+	
+	
+	public String list() throws Exception {
+		try {
+			List<com.zkz.model.Payment> query = service.GetPayments();
+			ActionContext ctx = ActionContext.getContext();
+			ValueStack vs=ctx.getValueStack();
+			vs.push(query);
+			return SUCCESS;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ERROR;
+		}
+	}
 
 	public void validateRecord() {
 		if (payment.getMoney() == null) {

@@ -15,11 +15,11 @@
 		<property name="paytime" column="paytime" type="date"></property>
 		<property name="place" column="place" type="string"></property>
 		<property name="money" column="money" type="big_decimal"></property> 
-		<property name="paytype" not-null="true">
+	 	<property name="paytype" not-null="true">
 			<type name="org.hibernate.type.EnumType">
 	    		<param name="enumClass">com.zkz.model.PayTypeEnum</param>
 	    	</type>
-		</property> 
+		</property>
 		<property name="remark" column="remark" type="string"></property> 
 	</class>
 </hibernate-mapping>  

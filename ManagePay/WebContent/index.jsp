@@ -23,7 +23,7 @@
 				<td><s:select name="payment.paytype" list="PayType"></s:select></td>
 			</tr>
 			<tr>
-				<th>付款对象金额：</th>
+				<th>付款对象：</th>
 				<td><s:select name="payment.paywhat" list="PayWhat"></s:select></td>
 			</tr>
 			<tr>
@@ -49,6 +49,7 @@
 				<td><input type="submit" value="提交"></td>
 			</tr>
 		</table>
+		<div>跳转:<a href="list.action">list</a></div>
 	</form>
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
