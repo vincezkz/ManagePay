@@ -17,7 +17,7 @@ public class IndexAction extends ActionSupport {
 	private Map PayType;
 	private Map PayWhat;
 	private PaymentValue payment;
-
+	private List payments;
 	public void setService(PayServiceInterface service) {
 		this.service = service;
 	}
@@ -46,6 +46,16 @@ public class IndexAction extends ActionSupport {
 		this.PayType = PayType;
 	}
 
+	
+	public List getPayments() {
+		return this.payments;
+	}
+
+	
+	public void setPayments(List payments) {
+		this.payments = payments;
+	}	
+	
 	public String execute() throws Exception {
 
 		try {
@@ -92,9 +102,10 @@ public class IndexAction extends ActionSupport {
 	public String list() throws Exception {
 		try {
 			List<com.zkz.model.Payment> query = service.GetPayments();
-			ActionContext ctx = ActionContext.getContext();
-			ValueStack vs=ctx.getValueStack();
-			vs.push(query);
+			//ActionContext ctx = ActionContext.getContext();
+			//ValueStack vs=ctx.getValueStack();
+			//vs.push(query);
+			setPayments(query);
 			return SUCCESS;
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -10,6 +10,7 @@
 		<property name="paywhat" not-null="true">
 			<type name="org.hibernate.type.EnumType">
     			<param name="enumClass">com.zkz.model.PayWhatEnum</param>
+    			<param name="type">12</param>
     		</type>
 		</property>
 		<property name="paytime" column="paytime" type="date"></property>
@@ -18,6 +19,7 @@
 	 	<property name="paytype" not-null="true">
 			<type name="org.hibernate.type.EnumType">
 	    		<param name="enumClass">com.zkz.model.PayTypeEnum</param>
+	    		<param name="type">12</param>
 	    	</type>
 		</property>
 		<property name="remark" column="remark" type="string"></property> 
